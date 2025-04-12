@@ -1,5 +1,5 @@
 # Panduan
-
+Panduan ini dapat langsung dilakukan tanpa perlu proses instalasi CI4, tanpa mengkonfigurasi file .env serta tanpa memindahkan dan mengedit file dari folder public ke dalam rootfolder.
 
 1. Download sourcecode repositori ini
 2. Ekstrak hasil download, Rename nama rootfolder yang tadinya todoo-main menjadi todoo, lalu tempatkan pada folder htdocs
@@ -8,7 +8,7 @@
 
 Ini hanyalah tutorial aplikasi todo list paling sederhana tanpa CSS serta dengan tabel task/tugas yang sederhana (hanya ada id, tugas, tanggal, waktu, status & foto).
 
-Selanjutnya yang harus anda lakukan adalah : Fahami script pada file Routes.php serta semua file yang ada dalam folder Controllers (kecuali BaseController tidak perlu karena bawaan CI4), Model dan Views.
+Selanjutnya yang harus anda lakukan adalah : Fahami script pada file Routes.php serta semua file yang ada dalam folder Controllers (kecuali BaseController tidak perlu karena bawaan CI4), Model dan Views (kecuali folder errors, karena bawaan CI4).
 
 Jika sudah difahami, anda dapat melanjutkan untuk :
 1. Menyesuaikan (melengkapi inputan data) dengan basis data lengkap yang telah dibuat sebelumnya (full version)
