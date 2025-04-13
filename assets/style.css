@@ -1,0 +1,324 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f6fa;
+    color: #2f3640;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;  /* Menambah lebar container menjadi lebih besar, misalnya 1000px */
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Judul */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #273c75;
+}
+
+/* Form input */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2f3640;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #dcdde1;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Styling untuk semua tombol */
+button, .btn, .btn-small, .btn-danger, .pagination a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    border: none; /* Menghilangkan border pada tombol */
+    font-size: 16px; /* Mengatur ukuran font konsisten */
+    font-weight: bold;
+}
+
+/* Styling untuk tombol umum */
+button, .btn, .btn-small, .btn-danger {
+    padding: 10px 20px;
+    background-color: #44bd32;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover, .btn-small:hover, .btn-danger:hover {
+    background-color: #4cd137;
+}
+
+/* Styling untuk tombol danger */
+.btn-danger {
+    background-color: #e84118;
+}
+
+.btn-danger:hover {
+    background-color: #c23616;
+}
+
+/* Styling untuk tombol 'Kembali' dan 'Ubah Tugas' */
+a.btn, button[type="submit"] {
+    font-size: 16px; /* Menentukan ukuran font yang sama */
+    padding: 10px 20px; /* Menyesuaikan padding agar konsisten */
+    display: inline-block;
+}
+
+a.btn {
+    background-color: #3498db; /* Tombol 'Kembali' dengan warna biru */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #2980b9;
+}
+
+button[type="submit"] {
+    background-color: #44bd32; /* Tombol 'Ubah Tugas' dengan warna hijau */
+}
+
+button[type="submit"]:hover {
+    background-color: #4cd137;
+}
+
+/* Pagination links */
+.pagination a {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background-color: #2980b9;
+}
+
+.pagination .active {
+    background-color: #2c3e50;
+}
+
+.pagination .disabled {
+    background-color: #e0e0e0;
+    color: #a5a5a5;
+    pointer-events: none;
+}
+
+.pagination a:focus {
+    outline: none;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .container,
+    .form-container {
+        padding: 20px;
+    }
+
+    ul.todo-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        margin-top: 10px;
+    }
+}
+
+/* Navigasi */
+.navbar {
+    background-color: #273c75;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #40739e;
+}
+
+/* Dashboard */
+.welcome-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #192a56;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.desc-text {
+    font-size: 16px;
+    color: #353b48;
+    background-color: #f1f2f6;
+    padding: 15px;
+    border-left: 5px solid #00a8ff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Menghilangkan garis bawah pada semua tombol */
+button, .btn, .btn-small, .btn-danger, .pagination a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    border: none; /* Menghilangkan border pada tombol */
+}
+
+/* Styling untuk tombol umum */
+button, .btn, .btn-small, .btn-danger {
+    padding: 10px 20px;
+    background-color: #44bd32;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover, .btn-small:hover, .btn-danger:hover {
+    background-color: #4cd137;
+}
+
+/* Styling untuk tombol danger */
+.btn-danger {
+    background-color: #e84118;
+}
+
+.btn-danger:hover {
+    background-color: #c23616;
+}
+
+/* Pagination links (menghilangkan garis bawah) */
+.pagination a {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background-color: #2980b9;
+}
+
+.pagination .active {
+    background-color: #2c3e50;
+}
+
+.pagination .disabled {
+    background-color: #e0e0e0;
+    color: #a5a5a5;
+    pointer-events: none;
+}
+
+.pagination a:focus {
+    outline: none;
+}
+
+/* Form pencarian */
+.search-form {
+    margin-top: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Tabel */
+.table-container {
+    overflow-x: auto;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.task-table th,
+.task-table td {
+    border: 1px solid #dcdde1;
+    padding: 12px;
+    text-align: center;
+}
+
+.task-table th {
+    background-color: #273c75;
+    color: white;
+}
+
+.task-table tr:nth-child(even) {
+    background-color: #f5f6fa;
+}
+
+.task-table tr:hover {
+    background-color: #dcdde1;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+

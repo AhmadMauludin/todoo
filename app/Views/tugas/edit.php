@@ -1,29 +1,51 @@
 <?= $this->extend('layouts/main'); ?>
 <?= $this->section('content'); ?>
 
-<img src="<?= base_url('uploads/tugas/' . $tugas['foto']) ?>" width="50">
-<br>
-<form action="<?= site_url('tugas/update/' . $tugas['id']) ?>" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="old_foto" value="<?= $tugas['foto'] ?>">
+<div class="form-container">
+    <h2 style="text-align:center; color:#273c75;">Edit Data Tugas</h2>
 
-    <p>Tugas <input name="tugas" type="text" value="<?= $tugas['tugas'] ?>" required />
+    <div style="text-align:center; margin-bottom: 15px;">
+        <img src="<?= base_url('uploads/tugas/' . $tugas['foto']) ?>" width="80" style="border-radius: 8px;">
+    </div>
 
-    <p>Tanggal <input type="date" name="tanggal" value="<?= $tugas['tanggal'] ?>" />
+    <form action="<?= site_url('tugas/update/' . $tugas['id']) ?>" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="old_foto" value="<?= $tugas['foto'] ?>">
 
-    <p>Waktu <input type="time" name="waktu" value="<?= $tugas['waktu'] ?>" />
+        <div class="form-group">
+            <label for="tugas">Tugas</label>
+            <input name="tugas" id="tugas" type="text" value="<?= $tugas['tugas'] ?>" required>
+        </div>
 
-    <p>Status
-        <select name="status">
-            <option value="To do" <?= $tugas['status'] == 'To do' ? 'selected' : '' ?>>To do</option>
-            <option value="Berjalan" <?= $tugas['status'] == 'Berjalan' ? 'selected' : '' ?>>Berjalan</option>
-            <option value="Selesai" <?= $tugas['status'] == 'Selesai' ? 'selected' : '' ?>>Selesai</option>
-            <option value="Batal" <?= $tugas['status'] == 'Batal' ? 'selected' : '' ?>>Batal</option>
-        </select>
+        <div class="form-group">
+            <label for="tanggal">Tanggal</label>
+            <input type="date" name="tanggal" id="tanggal" value="<?= $tugas['tanggal'] ?>">
+        </div>
 
-    <p>Foto <input name="foto" type="file" id="formFile" />
+        <div class="form-group">
+            <label for="waktu">Waktu</label>
+            <input type="time" name="waktu" id="waktu" value="<?= $tugas['waktu'] ?>">
+        </div>
 
-    <p><a href="<?= base_url('tugas'); ?>" type="button">Kembali</a>
-        <button type="submit">Ubah Tugas</button>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select name="status" id="status">
+                <option value="To do" <?= $tugas['status'] == 'To do' ? 'selected' : '' ?>>To do</option>
+                <option value="Berjalan" <?= $tugas['status'] == 'Berjalan' ? 'selected' : '' ?>>Berjalan</option>
+                <option value="Selesai" <?= $tugas['status'] == 'Selesai' ? 'selected' : '' ?>>Selesai</option>
+                <option value="Batal" <?= $tugas['status'] == 'Batal' ? 'selected' : '' ?>>Batal</option>
+            </select>
+        </div>
 
-</form>
+        <div class="form-group">
+            <label for="formFile">Foto Baru (Opsional)</label>
+            <input name="foto" type="file" id="formFile">
+        </div>
+
+        <div class="form-actions">
+            <a href="<?= base_url('tugas'); ?>" class="btn btn-danger">Kembali</a>
+            <button type="submit" class="btn">Ubah Tugas</button>
+        </div>
+    </form>
+</div>
+
 <?= $this->endSection(); ?>
