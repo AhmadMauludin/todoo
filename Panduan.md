@@ -28,12 +28,13 @@ Jika menggunakan chat-GPT untuk bantuan (misalkan memasangkan CSS) pastikan prom
 
 sebelumnya pastikan tabelnya sudah siap, sementara kita gunakan dulu tabel pegawai dari ciapp, yang nantinya akan kita ganti dan sesuaikan menjadi user.
 
-1. app/config/Filters.php (replace filenya saja)
-2. app/config/Routes.php (tambahkan bagian variabel filter, role, login dan $pada halaman utama)
-3. tambahkan $role pada halaman tertentu yang hanya dapat diaksesnya
+1. copy app/config/Filters.php dari repository ciapp (replace filenya saja).
+2. modifikasi app/config/Routes.php (tambahkan bagian variabel filter, role, login dan $role pada halaman utama) contohnya lihat seperti yang ada pada repository ciapp.
+3. tambahkan $role pada halaman tertentu (misalnya tugas) yang hanya dapat diakses oleh role user.
 4. app/Controllers/Auth.php (tambahkan filenya sesuai di ciapp)
 5. app/Controllers/Pegawai.php (untuk kelola data usernya)
-6. app/Views/Auth (Copy dari ciapp)
+6. copy folder Filters 
+6. copy folder app/Views/Auth (dari ciapp)
 7. tambahkan menu logout di menu.php
 8. app/Views/Pegawai (untuk tampilan kelola user) sesuaikan tampilannya dengan css yang anda gunakan.
 
