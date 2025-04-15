@@ -26,21 +26,30 @@ Jika menggunakan chat-GPT untuk bantuan (misalkan memasangkan CSS) pastikan prom
 
 ### Yang harus ditambahkan & dikofigurasi saat menambah fitur login
 
-sebelumnya pastikan tabelnya sudah siap, sementara kita gunakan dulu tabel pegawai dari ciapp, yang nantinya akan kita ganti dan sesuaikan menjadi user.
+Kita gunakan dulu tabel pegawai dari ciapp, import (hanya) bagian tabel pegawai dan isinya yang berasal dari file (berekstensi .sql) pada folder writtable/backup ciapp ke database todo1., 
 
-1. copy app/config/Filters.php dari repository ciapp (replace filenya saja).
-2. modifikasi app/config/Routes.php (tambahkan bagian variabel filter, role, login dan $role pada halaman utama) contohnya lihat seperti yang ada pada repository ciapp.
-3. tambahkan $role pada halaman tertentu (misalnya tugas) yang hanya dapat diakses oleh role user.
-4. app/Controllers/Auth.php (tambahkan filenya sesuai di ciapp)
-5. app/Controllers/Pegawai.php (untuk kelola data usernya)
-6. copy folder Filters 
-6. copy folder app/Views/Auth (dari ciapp)
-7. tambahkan menu logout di menu.php
-8. app/Views/Pegawai (untuk tampilan kelola user) sesuaikan tampilannya dengan css yang anda gunakan.
+Cara mengimportnya :
+- Buka dulu file .sql nya di viscode
+- Copy kode dalam file.sql tersebut mulai dari 
+- Buka database todo1, Pastek pada fitur SQL di phpmyadminnya. lalu go.
+
+Nantinya Fitur dan tabel Pegawai tersebut akan kita ganti dan sesuaikan menjadi user. adapun sumber yang akan kita copykan juga berasal dari repository ciapp.
+
+1. Copy app/config/Filters.php (replace filenya).
+2. Modifikasi app/config/Routes.php (tambahkan bagian variabel filter, role, login dan $role pada halaman utama) contohnya lihat seperti yang ada pada file Routes.php repository ciapp.
+3. Tambahkan $role pada halaman tertentu (misalnya tugas) yang hanya dapat diakses oleh role user.
+4. Copy file app/Controllers/Auth.php
+5. Copy app/Controllers/Pegawai.php (untuk kelola data usernya)
+6. Copy folder app/Filters beserta 2 file di dalamnya
+6. Copy folder app/Views/Auth beserta file di dalamnya
+7. Tambahkan menu logout di menu.php
+8. Copy app/Views/Pegawai (untuk tampilan kelola user) sesuaikan tampilannya dengan css yang anda gunakan.
+9. Copy folder Uploads/pegawai beserta isinya.
 
 Sampai sini Coba dulu, kalo sudah berhasil :
 
-1. Ubah nama tabel pegawai menjadi user, rubah isi bagian menjadi admin dan user saja
+1. Ubah nama tabel pegawai menjadi user, rubah pilihan isi bagian menjadi admin dan user saja.
 2. Ubah nama controller PegawaiController.php menjadi UserController.php, sesuaikan isinya jika ada yang harus dirubah
 3. Ubah nama file model Pegawai.php menjadi User.php, sesuaikan juga isinya
-4. Pada file Routes.php sesuaikan Variabel Role nya menjadi admin dan user saja, serta sesuaikan $filter yang dapat mengaksesnya
+4. Pada file Routes.php sesuaikan Variabel Role nya menjadi admin dan user saja, serta sesuaikan $filter yang dapat mengaksesnya.
+5. Ubah nama folder Pegawai (pada Views) menjadi user dan Modifikasi 3 filenya (Ubah setiap kata pegawai menjadi user).
