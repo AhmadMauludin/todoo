@@ -46,7 +46,7 @@ Nantinya Fitur dan tabel Pegawai tersebut akan kita ganti dan sesuaikan menjadi 
 8. Copy app/Views/Pegawai (untuk tampilan kelola user) sesuaikan tampilannya dengan css yang anda gunakan.
 9. Copy folder Uploads/pegawai beserta isinya.
 
-Sampai sini Coba dulu, kalo sudah berhasil :
+Sampai sini Coba dulu login dengan username : maldin password : 12345., kalo sudah berhasil :
 
 1. Ubah nama tabel pegawai menjadi user, rubah pilihan isi bagian menjadi admin dan user saja.
 2. Ubah nama controller PegawaiController.php menjadi UserController.php, sesuaikan isinya jika ada yang harus dirubah
