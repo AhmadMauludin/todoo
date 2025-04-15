@@ -51,5 +51,15 @@ Sampai sini Coba dulu login dengan username : maldin password : 12345., kalo sud
 1. Ubah nama tabel pegawai menjadi user, rubah pilihan isi bagian menjadi admin dan user saja.
 2. Ubah nama controller PegawaiController.php menjadi UserController.php, sesuaikan isinya menjadi user.
 3. Ubah nama file model Pegawai.php menjadi User.php, sesuaikan juga isinya.
-4. Pada file Routes.php sesuaikan Variabel Role nya menjadi admin dan user saja, serta sesuaikan $filter yang dapat mengaksesnya.
+4. Pada file Routes.php ubah setiap tilisan pegawai menjadi user, serta sesuaikan Variabel Role nya menjadi admin dan user saja.
 5. Ubah nama folder Pegawai (pada Views) menjadi user dan Modifikasi 3 filenya (Ubah setiap kata pegawai menjadi user).
+
+Selanjutnya anda tinggal memikirkan alur penempatan halaman view usernya. saran saya karena konsep user management aplikasi todo list itu beda dengan ciapp maka :
+
+- Halaman user/create.php dapat diakses sebelum pengguna melakukan login.
+
+Logikanya, untuk pengguna yang belum punya akun pasti harus membuat akun dulu, maka harus ada akses ke halaman create.php misalkan dengan menambahkan link di tampilan login aplikasi (di bawah tombol login/masuk) untuk mengarah ke halaman daftar akun / create.php
+
+- Halaman user/index.php hanya bisa diakses oleh admin., namun admin tidak bisa membuat akun baru dan merubah data., maka untuk halaman user/index.php role yang yang bisa mengaksesnya hanya role $admin.
+
+- Halaman user/edit.php hanya bisa diakses oleh user setelah login ke dalam aplikasi., maka role yang bisa mengaksesnya hanya role $user. anda bisa membuatkan link ```pengaturan akun``` pada layouts/menu.php untuk bisa mengarahkan pengguna ke halaman user/edit.php tentunya dengan menambahkan variabel id yang didapat dari session login yang digunakan. contoh penulisan linknya : 
