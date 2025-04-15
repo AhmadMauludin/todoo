@@ -21,3 +21,24 @@ Jika sudah difahami, anda dapat melanjutkan untuk :
 Silahkan gunakan referensi dari repositori yang telah saya buat sebelumnya (seperti CI4 dan ciapp) atau referensi eksternal lain dari google atau chat-GPT., selamat berkarya dan bereksperimen.
 
 Jika menggunakan chat-GPT untuk bantuan (misalkan memasangkan CSS) pastikan prompt/pertanyaan yang digunakan jelas agar dimengerti, contohnya pada link berikut https://chatgpt.com/share/67fb5519-8c54-800d-b93b-75f83325e066
+
+# Panduan Menambahkan fitur Login dan Autentifikasi
+
+Yang harus ditambahkan saat menambah fitur login
+sebelumnya pastikan tabelnya sudah siap, sementara kita gunakan dulu tabel pegawai dari ciapp, yang nantinya akan kita ganti dan sesuaikan menjadi user.
+
+1. app/config/Filters.php (replace filenya saja)
+2. app/config/Routes.php (tambahkan bagian variabel filter, role, login dan $pada halaman utama)
+3. tambahkan $role pada halaman tertentu yang hanya dapat diaksesnya
+4. app/Controllers/Auth.php (tambahkan filenya sesuai di ciapp)
+5. app/Controllers/Pegawai.php (untuk kelola data usernya)
+6. app/Views/Auth (Copy dari ciapp)
+7. tambahkan menu logout di menu.php
+8. app/Views/Pegawai (untuk tampilan kelola user) sesuaikan tampilannya dengan css yang anda gunakan.
+
+Sampai sini Coba dulu, kalo sudah berhasil :
+
+1. Ubah nama tabel pegawai menjadi user, rubah isi bagian menjadi admin dan user saja
+2. Ubah nama controller PegawaiController.php menjadi UserController.php, sesuaikan isinya jika ada yang harus dirubah
+3. Ubah nama file model Pegawai.php menjadi User.php, sesuaikan juga isinya
+4. Pada file Routes.php sesuaikan Variabel Role nya menjadi admin dan user saja, serta sesuaikan $filter yang dapat mengaksesnya
