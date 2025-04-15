@@ -24,7 +24,8 @@ Jika menggunakan chat-GPT untuk bantuan (misalkan memasangkan CSS) pastikan prom
 
 # Panduan Menambahkan fitur Login dan Autentifikasi
 
-Yang harus ditambahkan saat menambah fitur login
+### Yang harus ditambahkan & dikofigurasi saat menambah fitur login
+
 sebelumnya pastikan tabelnya sudah siap, sementara kita gunakan dulu tabel pegawai dari ciapp, yang nantinya akan kita ganti dan sesuaikan menjadi user.
 
 1. app/config/Filters.php (replace filenya saja)
