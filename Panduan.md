@@ -30,8 +30,8 @@ Kita gunakan dulu tabel pegawai dari ciapp, import (hanya) bagian tabel pegawai 
 
 Cara mengimportnya :
 - Buka dulu file .sql nya di viscode
-- Copy kode dalam file.sql tersebut mulai dari 
-- Buka database todo1, Pastek pada fitur SQL di phpmyadminnya. lalu go.
+- Copy kode dalam file.sql tersebut mulai dari ``` -- Table structure for table `pegawai` ``` sampai ```UNLOCK TABLE````
+- Buka database todo1, Paste pada fitur SQL di phpmyadminnya. lalu GO. (Indikator keberhasilan import jika hasilnya hijau - hijau)
 
 Nantinya Fitur dan tabel Pegawai tersebut akan kita ganti dan sesuaikan menjadi user. adapun sumber yang akan kita copykan juga berasal dari repository ciapp.
 
