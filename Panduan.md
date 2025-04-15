@@ -58,8 +58,19 @@ Selanjutnya anda tinggal memikirkan alur penempatan halaman view usernya. saran 
 
 - Halaman user/create.php dapat diakses sebelum pengguna melakukan login.
 
-Logikanya, untuk pengguna yang belum punya akun pasti harus membuat akun dulu, maka harus ada akses ke halaman create.php misalkan dengan menambahkan link di tampilan login aplikasi (di bawah tombol login/masuk) untuk mengarah ke halaman daftar akun / create.php
+Logikanya, untuk pengguna yang belum punya akun pasti harus membuat akun dulu, maka harus ada akses ke halaman create.php misalkan dengan menambahkan link di tampilan login aplikasi (di bawah tombol login/masuk) untuk mengarah ke halaman daftar akun / create.php contoh penulisan linknya (pada halaman login.php)
+
+```
+<p>Belum memiliki akun?
+<p><a href="<?= site_url('user/create') ?>"> <button>Daftar</button></a>
+```
 
 - Halaman user/index.php hanya bisa diakses oleh admin., namun admin tidak bisa membuat akun baru dan merubah data., maka untuk halaman user/index.php role yang yang bisa mengaksesnya hanya role $admin.
 
 - Halaman user/edit.php hanya bisa diakses oleh user setelah login ke dalam aplikasi., maka role yang bisa mengaksesnya hanya role $user. anda bisa membuatkan link ```pengaturan akun``` pada layouts/menu.php untuk bisa mengarahkan pengguna ke halaman user/edit.php tentunya dengan menambahkan variabel id yang didapat dari session login yang digunakan. contoh penulisan linknya : 
+
+```
+<?php $idu = session('id'); ?> //membuat variabel
+<a href="<?= site_url('/logout') ?>" class="menu-link">
+```
+
