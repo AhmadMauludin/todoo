@@ -49,7 +49,7 @@ Nantinya Fitur dan tabel Pegawai tersebut akan kita ganti dan sesuaikan menjadi 
 Sampai sini Coba dulu login dengan username : maldin password : 12345., kalo sudah berhasil :
 
 1. Ubah nama tabel pegawai menjadi user, rubah pilihan isi bagian menjadi admin dan user saja.
-2. Ubah nama controller PegawaiController.php menjadi UserController.php, sesuaikan isinya jika ada yang harus dirubah
-3. Ubah nama file model Pegawai.php menjadi User.php, sesuaikan juga isinya
+2. Ubah nama controller PegawaiController.php menjadi UserController.php, sesuaikan isinya menjadi user.
+3. Ubah nama file model Pegawai.php menjadi User.php, sesuaikan juga isinya.
 4. Pada file Routes.php sesuaikan Variabel Role nya menjadi admin dan user saja, serta sesuaikan $filter yang dapat mengaksesnya.
 5. Ubah nama folder Pegawai (pada Views) menjadi user dan Modifikasi 3 filenya (Ubah setiap kata pegawai menjadi user).
